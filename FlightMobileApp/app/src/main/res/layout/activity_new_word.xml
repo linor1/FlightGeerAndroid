@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainLinerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.5">
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/itsWorking"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/guideline"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.54"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.954" />-->
+
+    <ImageView
+        android:id="@+id/imageFromServer"
+        android:layout_width="356dp"
+        android:layout_height="267dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <com.zerokol.views.joystickView.JoystickView
+        android:id="@+id/joystickView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/aileron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="332dp"
+        android:text="aileron:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBottom_toTopOf="@+id/contentThrottle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/aileronInformation"
+        android:layout_width="90dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="320dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBottom_toTopOf="@+id/contentThrottle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.327" />
+
+    <TextView
+        android:id="@+id/elevator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="320dp"
+        android:text="elevator:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBottom_toTopOf="@+id/contentThrottle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.686" />
+
+    <TextView
+        android:id="@+id/elevatorInfo"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBottom_toTopOf="@+id/contentThrottle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="210dp"
+        android:layout_height="88dp"
+        app:layout_constraintBottom_toTopOf="@+id/joystickView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/angletextViewLab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/angle_lab"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/angleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/none"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/powerTextViewLab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/power_lab"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/powerTextView"
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"
+                android:text="@string/none"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/directionTextViewLab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/direction_lab"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/directionTextView"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="@string/none"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+    </TableLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintGuide_begin="20dp" />
+
+    // sliders
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/prograssBar"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joystickView"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="188dp"
+        android:layout_marginBottom="8dp"
+        android:text="Throttle"
+
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarThrottle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/contentThrottle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginTop="260dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toEndOf="@+id/seekBarThrottle"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekBarThrottle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/prograssBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewRadder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="12dp"
+        android:text="Radder"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarRadder"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekBarRadder"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="9dp"
+        android:padding="50dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toTopOf="@+id/radderContent"
+        app:layout_constraintEnd_toStartOf="@+id/joystickView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/radderContent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="260dp"
+        android:orientation="horizontal"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--</LinearLayout>-->
